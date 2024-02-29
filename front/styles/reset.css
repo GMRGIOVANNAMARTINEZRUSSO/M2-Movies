@@ -1,0 +1,72 @@
+/* reset.css */
+
+/* Box sizing border-box */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Margin and padding reset */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+figure,
+figcaption,
+blockquote,
+pre,
+fieldset,
+legend,
+button,
+input,
+textarea {
+  margin: 0;
+  padding: 0;
+}
+
+/* Typography reset */
+body,
+button,
+input,
+select,
+textarea {
+  font-family: Arial, sans-serif;
+}
+
+/* Lists reset */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Media elements reset */
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Forms reset */
+button,
+input,
+select,
+textarea {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+/* Other resets as needed */
+

@@ -1,4 +1,4 @@
-const tempData = [
+/*const tempData = [
   {
     title: "Guardians of the Galaxy Vol. 2",
     year: 2017,
@@ -86,6 +86,4 @@ const content = document.createElement('div');
 // Agrega las tarjetas al contenedor
 movieCards.forEach(card => {
   container.appendChild(card);
-});
-
-
+}); */

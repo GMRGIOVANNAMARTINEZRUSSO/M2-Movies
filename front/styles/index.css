@@ -17,7 +17,7 @@ header {
   }
   
   /* Estilos para la imagen del encabezado */
-  header img {
+  header .logoPelicula {
     width: 50px; /* Tamaño deseado */
     height: auto; /* Altura automática para mantener la proporción */
   }
@@ -92,4 +92,27 @@ header {
             font-weight: bold;
             color: #333;
         }
-             
+/*carusel*/
+#carouselPeliculas   .carousel-item > img {
+    aspect-ratio: 16/9;
+    object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+    max-width: 100%;
+    width: 100%;
+  }
+  #carouselPeliculas .carousel-slide {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #carouselPeliculas .carousel-slide > img {
+    height: 40vw;
+    max-width: initial;
+  }
+  #carouselPeliculas .carousel-item::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    backdrop-filter: blur(5px);
+  }

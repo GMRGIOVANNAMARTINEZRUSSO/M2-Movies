@@ -37,3 +37,5 @@ const renderCards = (data) => {
 
 //export default renderCards;
 module.exports = renderCards;
+
+

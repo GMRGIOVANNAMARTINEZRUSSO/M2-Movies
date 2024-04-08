@@ -1,10 +1,37 @@
-const showMessageFunction = require ("../services/showMessage");
-const newMovieService = require("../services/movieService");
+const movieService = require("../services/movieService");
+// const showMessageFunction = require ("../services/showMessage");
+// const showMessage =  (req, res) => {
 
-
-const showMessage =  (req, res) => {
-// res.send(showMessageFunction());
+const getAllMovies = async (req, res) => {
+    try {
+        const movies = await movieService.getAllMovies();
+        res.json(movies);
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
 };
+//         res.status(500).json({ error: 'Error al obtener las películas' });
+
+const createMovie = async (req, res) =>{
+try {
+    const {title, director, year, duration, genre, rate ,poster} = req.body;
+    const newMovie = await movieService.createMovie(title, director, year, duration, genre, rate ,poster);
+    console.log (newMovie);
+    // res.send("enviado correctamente");
+    res.status(201).json(newMovie);
+} catch (error) {
+    res.status(500).json({ message: error.message });
+}
+}
+
+module.exports = {
+    // moviesController:showMessage,
+    getAllMovies,
+    createMovie,
+};
+
+
+// res.send(showMessageFunction());
 // Controlador para mostrar un mensaje
 // const showMessage = (req, res) => {
 //     const message = "Próximamente estarán disponibles los datos de películas.";
@@ -20,40 +47,3 @@ const showMessage =  (req, res) => {
 // movieController.js
 
 // Controlador de películas
-const getAllMovies = async (req, res) => {
-    // res.json(movieService.getAllMovies())
-    console.log(newMovieService.getAllMovies());
-    // const moviesController = async (req, res) => {
-    try {
-        // Llamamos a la función asíncrona del servicio para obtener todas las películas
-        const allMovies = await newMovieService.getAllMovies();
-        console.log(allMovies);
-        
-        // Enviamos la respuesta al cliente con las películas obtenidas
-        res.json(allMovies);
-    } catch (error) {
-        // En caso de error, enviamos un mensaje de error al cliente
-        res.status(500).json({ error: 'Error al obtener las películas' });
-    }
-};
-const createMovies = (req, res) =>{
-try {
-    const {title, director, year, duration, genre, rate ,poster} = req.body
-    const movie = newMovieService.addMovies(title, director, year, duration, genre, rate ,poster);
-    console.log (movie);
-    res.send("enviado correctamente");
-} catch (error) {
-    res.json({error: error.message})
-}
-
-}
-
-// Exportamos la función del controlador
-module.exports = {
-    moviesController:showMessage,
-    getAllMovies,
-    createMovies,
-};
-
-
-

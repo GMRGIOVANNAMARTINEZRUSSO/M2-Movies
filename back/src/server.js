@@ -7,7 +7,6 @@ const moviesController = require('./controllers/moviesController.js');
 
 const app = express();
 
-
 // aca utilizar el middleware 
 app.use(morgan("dev"));
 app.use(cors());
@@ -18,8 +17,6 @@ app.use((req, res, next) =>{
     next();
 });
 
-// Montar el enrutador en la ruta específica
-// app.use('/api', router);
 app.use(router);
 
 module.exports = app;

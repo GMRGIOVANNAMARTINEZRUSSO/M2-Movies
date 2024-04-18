@@ -7,12 +7,12 @@ const moviesController = require('./controllers/moviesController.js');
 
 const app = express();
 
-// aca utilizar el middleware 
 app.use(morgan("dev"));
 app.use(cors());
 app.use(express.json());
+app.use(express.static("front"));
 
-app.use((req, res, next) =>{
+app.use((req, res, next) => {
     console.log("estamos pasando por mi propio middleware");
     next();
 });

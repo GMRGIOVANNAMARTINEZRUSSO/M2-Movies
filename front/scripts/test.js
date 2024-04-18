@@ -1,10 +1,5 @@
-// module.js
-//const $ = require('jquery');
 const container = document.getElementById('container');
 
-//const fetchData = (url, callback) => {
-  //$.get(url, callback);
-//};
 
 const renderCards = (data) => {
   const movieCards = data.map(movie => {
@@ -17,7 +12,7 @@ const renderCards = (data) => {
 
     const content = document.createElement('div');
     content.classList.add('movie-card-content');
-    content.innerHTML= `
+    content.innerHTML = `
       <a href="${movie.title}"><h2>${movie.title}</h2></a>
       <p><strong>Año:</strong> ${movie.year}</p>
       <p><strong>Director:</strong> ${movie.director}</p>
@@ -35,12 +30,6 @@ const renderCards = (data) => {
   });
 };
 
-// export default renderCards;
-//module.exports = renderCards;
-
-// const renderCards = require("./renderCards")
-// main.js
-//const { fetchData, renderCards } = require('./module.js');
 
 //import renderCards from "./renderCards";
 const url1 = "https://students-api.2.us-1.fl0.io/movies"

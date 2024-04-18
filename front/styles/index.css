@@ -12,23 +12,18 @@ header {
     padding: 10px;
     display: flex;
     align-items: center;
-    /* Para alinear verticalmente los elementos */
     justify-content: space-between;
-    /* Para separar la imagen y la lista */
 }
 
 /* Estilos para la imagen del encabezado */
 header .logoPelicula {
     width: 50px;
-    /* Tamaño deseado */
     height: auto;
-    /* Altura automática para mantener la proporción */
 }
 
 /* Estilos para la lista ordenada */
 header ol {
     list-style: none;
-    /* Elimina los estilos predeterminados de la lista */
     margin: 0;
     padding: 0;
 }
@@ -36,11 +31,8 @@ header ol {
 /* Estilos para los elementos de la lista */
 header ol li {
     display: inline-block;
-    /* Para que los elementos de la lista se muestren en línea */
     margin-right: 10px;
-    /* Espacio entre elementos */
     font-size: 14px;
-    /* Tamaño de fuente */
 }
 
 h1 h2 p {
@@ -52,20 +44,15 @@ h1 h2 p {
 
 #container {
     width: auto;
-    /* height: 0px; */
     margin: 4rem auto;
     display: flex;
-    /* Usamos flexbox en lugar de grid */
     flex-wrap: wrap;
-    /* Permitimos que las tarjetas envuelvan en la siguiente línea si no hay suficiente espacio */
     justify-content: space-around;
-    /* Distribuimos el espacio disponible alrededor de las tarjetas */
 }
 
 .movie-card {
     width: 200px;
     flex: 0 1 300px;
-    /* Flex-grow, flex-shrink, flex-basis */
     margin: 10px;
     padding: 20px;
     border: 1px solid #ccc;
